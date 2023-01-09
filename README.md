@@ -1,10 +1,10 @@
-# lib-starter
+# nano-fns
 
-[![npm version](https://badgen.net/npm/v/lib-starter)](https://npm.im/lib-starter) [![npm downloads](https://badgen.net/npm/dm/lib-starter)](https://npm.im/lib-starter)
+[![npm version](https://badgen.net/npm/v/nano-fns)](https://npm.im/nano-fns) [![npm downloads](https://badgen.net/npm/dm/nano-fns)](https://npm.im/nano-fns)
 
 ## Using this template
 
-- Search `lib-starter` and replace it with your custom package name.
+- Search `nano-fns` and replace it with your custom package name.
 - Search `charchamp` and replace it with your name.
 
 Features:
@@ -19,7 +19,7 @@ To skip CI (GitHub action), add `skip-ci` to commit message. To skip release, ad
 ## Install
 
 ```bash
-npm i lib-starter
+npm i nano-fns
 ```
 
 ## License

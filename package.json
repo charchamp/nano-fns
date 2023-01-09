@@ -1,5 +1,5 @@
 {
-  "name": "lib-starter",
+  "name": "nano-fns",
   "version": "0.0.0",
   "packageManager": "^pnpm@7.14.0",
   "description": "boilerplate for your next TypeScript library",
@@ -7,6 +7,10 @@
   "keywords": [],
   "license": "MIT",
   "author": "Charlie <hi@charchamp.cc> (https://charchamp.cc)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charchamp/nano-fns.git"
+  },
   "sideEffects": false,
   "files": [
     "dist"
