@@ -15,8 +15,8 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
@@ -29,7 +29,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup",
+    "build-fast": "tsup src/index.ts --format cjs,esm",
+    "build": "pnpm run build-fast -- --dts-resolve",
     "preinstall": "npx only-allow pnpm",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.md --fix",
     "prepublishOnly": "pnpm build",

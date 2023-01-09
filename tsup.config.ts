@@ -1,11 +1,16 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ['./src'],
-  format: ['cjs', 'esm'],
+  splitting: true,
+  sourcemap: true,
   clean: true,
   dts: {
     resolve: true
   },
-  splitting: true
+  format: ['cjs', 'esm'],
+  minify: true,
+  bundle: true,
+  skipNodeModulesBundle: true,
+  entry: ['./src'],
+  target: 'es2020'
 })
