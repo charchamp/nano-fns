@@ -1,0 +1,5 @@
+---
+'nano-fns': patch
+---
+
+update

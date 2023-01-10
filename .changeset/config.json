@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "charchamp/repo-name"
+      "repo": "charchamp/nano-fns"
     }
   ],
   "commit": false,

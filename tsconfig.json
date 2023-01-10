@@ -1,16 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es2021",
-    "module": "esnext",
-    "lib": ["es2019", "DOM"],
+    "target": "ES2015",
+    "module": "ES2015",
+    "lib": [
+      "ES6",
+      "ES2015",
+      "DOM"
+    ],
     "strict": true,
+    "allowJs": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
     "noUnusedLocals": true,
-    "resolveJsonModule": true,
-    "types": ["node"]
-  },
-  "include": ["src", "test"],
-  "exclude": []
+    "resolveJsonModule": true
+  }
 }
