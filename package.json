@@ -1,48 +1,45 @@
 {
-  "name": "nano-fns",
+  "name": "nano-fns-monorepo",
   "version": "0.0.1",
+  "private": true,
   "packageManager": "^pnpm@7.14.0",
-  "description": "boilerplate for your next TypeScript library",
-  "type": "module",
-  "keywords": [],
+  "description": "Modern JavaScript utility library",
+  "keywords": [
+    "tools"
+  ],
   "license": "MIT",
-  "author": "Charlie <hi@charchamp.cc> (https://charchamp.cc)",
+  "homepage": "https://github.com/charchamp/nano-fns#readme",
+  "bugs": "https://github.com/charchamp/nano-fns/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/charchamp/nano-fns.git"
   },
-  "sideEffects": false,
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    }
-  },
-  "publishConfig": {
-    "access": "public"
-  },
+  "author": "Charlie <hi@charchamp.cc> (https://charchamp.cc)",
   "scripts": {
-    "build-fast": "tsup src/index.ts --format cjs,esm",
-    "build": "pnpm run build-fast -- --dts-resolve",
     "preinstall": "npx only-allow pnpm",
+    "dev": "turbo run dev --filter=\"./packages/*\"",
+    "build": "turbo run build --filter=\"./packages/*\"",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.md --fix",
-    "prepublishOnly": "pnpm build",
-    "test": "vitest"
+    "test": "vitest",
+    "clean": "pnpm recursive exec -- rm -rf node_modules; rm -rf node_modules",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "publish": "pnpm build && changeset publish",
+    "prepublishOnly": "pnpm recursive run build"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.0",
     "@charchamp/eslint-config": "^0.0.1",
     "@charchamp/prettier-config": "^0.0.1",
-    "eslint": "^8.26.0",
-    "prettier": "^2.7.1",
-    "tsup": "^6.4.0",
-    "typescript": "^4.8.4",
+    "eslint": "^8.31.0",
+    "prettier": "^2.8.2",
+    "tsup": "^6.5.0",
+    "turbo": "^1.6.3",
+    "typescript": "^4.9.4",
     "vitest": "^0.24.5"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
